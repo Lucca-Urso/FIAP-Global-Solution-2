@@ -1,0 +1,76 @@
+{
+  "alerts": [
+    {
+      "id": "alert-001",
+      "type": "flood",
+      "region": "Região Sul",
+      "severity": "high",
+      "status": "active",
+      "timestamp": "2026-06-04T10:30:00Z",
+      "description": "Risco elevado de enchentes devido a chuvas intensas nas últimas 48 horas."
+    },
+    {
+      "id": "alert-002",
+      "type": "fire",
+      "region": "Pantanal",
+      "severity": "critical",
+      "status": "active",
+      "timestamp": "2026-06-04T09:15:00Z",
+      "description": "Múltiplos focos de queimadas detectados por satélites. Condições críticas de seca."
+    },
+    {
+      "id": "alert-003",
+      "type": "heat",
+      "region": "Caatinga",
+      "severity": "critical",
+      "status": "active",
+      "timestamp": "2026-06-04T08:00:00Z",
+      "description": "Onda de calor extrema com temperaturas acima de 38°C. Risco à saúde."
+    },
+    {
+      "id": "alert-004",
+      "type": "drought",
+      "region": "Cerrado",
+      "severity": "high",
+      "status": "active",
+      "timestamp": "2026-06-04T07:45:00Z",
+      "description": "Baixa umidade crítica (35%) e risco elevado de queimadas."
+    },
+    {
+      "id": "alert-005",
+      "type": "fire",
+      "region": "Amazônia",
+      "severity": "medium",
+      "status": "monitoring",
+      "timestamp": "2026-06-04T06:30:00Z",
+      "description": "Focos de calor detectados. Equipes de monitoramento em alerta."
+    },
+    {
+      "id": "alert-006",
+      "type": "flood",
+      "region": "Mata Atlântica",
+      "severity": "medium",
+      "status": "monitoring",
+      "timestamp": "2026-06-04T05:00:00Z",
+      "description": "Nível dos rios em elevação. Monitoramento contínuo necessário."
+    },
+    {
+      "id": "alert-007",
+      "type": "heat",
+      "region": "Região Nordeste",
+      "severity": "high",
+      "status": "active",
+      "timestamp": "2026-06-03T22:00:00Z",
+      "description": "Temperaturas elevadas persistentes. Atenção para grupos vulneráveis."
+    },
+    {
+      "id": "alert-008",
+      "type": "drought",
+      "region": "Região Sudeste",
+      "severity": "low",
+      "status": "resolved",
+      "timestamp": "2026-06-03T18:00:00Z",
+      "description": "Condições de seca monitoradas. Chuvas recentes melhoraram o cenário."
+    }
+  ]
+}

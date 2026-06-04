@@ -1,0 +1,82 @@
+{
+  "sensors": [
+    {
+      "id": "sensor-001",
+      "name": "SAT-1 Orbiter",
+      "location": "Órbita Terrestre Baixa",
+      "type": "satellite",
+      "metrics": [
+        { "name": "Temperatura da Superfície", "value": "32.5°C", "unit": "°C" },
+        { "name": "Umidade do Solo", "value": "78", "unit": "%" },
+        { "name": "Cobertura de Nuvens", "value": "45", "unit": "%" }
+      ],
+      "status": "active",
+      "lastUpdate": "2026-06-04T11:45:00Z"
+    },
+    {
+      "id": "sensor-002",
+      "name": "Estação Amazônica",
+      "location": "Manaus, AM",
+      "type": "ground",
+      "metrics": [
+        { "name": "Temperatura do Ar", "value": "31.2", "unit": "°C" },
+        { "name": "Umidade Relativa", "value": "85", "unit": "%" },
+        { "name": "Qualidade do Ar", "value": "42", "unit": "AQI" }
+      ],
+      "status": "active",
+      "lastUpdate": "2026-06-04T11:50:00Z"
+    },
+    {
+      "id": "sensor-003",
+      "name": "Boia Oceânica Alpha",
+      "location": "Oceano Atlântico",
+      "type": "buoy",
+      "metrics": [
+        { "name": "Temperatura da Água", "value": "26.8", "unit": "°C" },
+        { "name": "Nível do Mar", "value": "0.45", "unit": "m" },
+        { "name": "Salinidade", "value": "35.2", "unit": "ppt" }
+      ],
+      "status": "active",
+      "lastUpdate": "2026-06-04T11:55:00Z"
+    },
+    {
+      "id": "sensor-004",
+      "name": "Torre de Monitoramento",
+      "location": "Brasília, DF",
+      "type": "tower",
+      "metrics": [
+        { "name": "Velocidade do Vento", "value": "12.5", "unit": "km/h" },
+        { "name": "Direção do Vento", "value": "SE", "unit": "" },
+        { "name": "Pressão Atmosférica", "value": "1013.2", "unit": "hPa" }
+      ],
+      "status": "active",
+      "lastUpdate": "2026-06-04T11:40:00Z"
+    },
+    {
+      "id": "sensor-005",
+      "name": "SAT-2 Sentinel",
+      "location": "Órbita Geoestacionária",
+      "type": "satellite",
+      "metrics": [
+        { "name": "Radiação Solar", "value": "1361", "unit": "W/m²" },
+        { "name": "Temperatura da Superfície", "value": "35.1", "unit": "°C" },
+        { "name": "Índice de Vegetação", "value": "0.72", "unit": "NDVI" }
+      ],
+      "status": "active",
+      "lastUpdate": "2026-06-04T11:35:00Z"
+    },
+    {
+      "id": "sensor-006",
+      "name": "Estação Costeira",
+      "location": "Rio de Janeiro, RJ",
+      "type": "ground",
+      "metrics": [
+        { "name": "Temperatura do Ar", "value": "29.7", "unit": "°C" },
+        { "name": "Umidade Relativa", "value": "72", "unit": "%" },
+        { "name": "Qualidade do Ar", "value": "68", "unit": "AQI" }
+      ],
+      "status": "maintenance",
+      "lastUpdate": "2026-06-04T10:30:00Z"
+    }
+  ]
+}

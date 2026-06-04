@@ -1,0 +1,101 @@
+{
+  "lastUpdate": "2026-06-04T12:00:00Z",
+  "regions": [
+    {
+      "id": "amazonia",
+      "name": "Amazônia",
+      "temperature": 32.5,
+      "humidity": 78,
+      "airQuality": 45,
+      "floodRisk": "low",
+      "fireRisk": "medium",
+      "heatRisk": "low",
+      "alertLevel": "medium",
+      "lastUpdate": "2026-06-04T11:45:00Z"
+    },
+    {
+      "id": "pantanal",
+      "name": "Pantanal",
+      "temperature": 35.2,
+      "humidity": 65,
+      "airQuality": 78,
+      "floodRisk": "low",
+      "fireRisk": "high",
+      "heatRisk": "medium",
+      "alertLevel": "high",
+      "lastUpdate": "2026-06-04T11:50:00Z"
+    },
+    {
+      "id": "cerrado",
+      "name": "Cerrado",
+      "temperature": 33.8,
+      "humidity": 42,
+      "airQuality": 62,
+      "floodRisk": "low",
+      "fireRisk": "high",
+      "heatRisk": "high",
+      "alertLevel": "high",
+      "lastUpdate": "2026-06-04T11:55:00Z"
+    },
+    {
+      "id": "mata-atlantica",
+      "name": "Mata Atlântica",
+      "temperature": 28.4,
+      "humidity": 85,
+      "airQuality": 38,
+      "floodRisk": "medium",
+      "fireRisk": "low",
+      "heatRisk": "low",
+      "alertLevel": "low",
+      "lastUpdate": "2026-06-04T11:40:00Z"
+    },
+    {
+      "id": "caatinga",
+      "name": "Caatinga",
+      "temperature": 38.1,
+      "humidity": 35,
+      "airQuality": 85,
+      "floodRisk": "low",
+      "fireRisk": "medium",
+      "heatRisk": "critical",
+      "alertLevel": "critical",
+      "lastUpdate": "2026-06-04T11:30:00Z"
+    },
+    {
+      "id": "sul",
+      "name": "Região Sul",
+      "temperature": 22.3,
+      "humidity": 92,
+      "airQuality": 35,
+      "floodRisk": "high",
+      "fireRisk": "low",
+      "heatRisk": "low",
+      "alertLevel": "high",
+      "lastUpdate": "2026-06-04T11:35:00Z"
+    },
+    {
+      "id": "sudeste",
+      "name": "Região Sudeste",
+      "temperature": 29.7,
+      "humidity": 68,
+      "airQuality": 72,
+      "floodRisk": "medium",
+      "fireRisk": "low",
+      "heatRisk": "medium",
+      "alertLevel": "medium",
+      "lastUpdate": "2026-06-04T11:25:00Z"
+    },
+    {
+      "id": "nordeste",
+      "name": "Região Nordeste",
+      "temperature": 36.5,
+      "humidity": 58,
+      "airQuality": 55,
+      "floodRisk": "low",
+      "fireRisk": "medium",
+      "heatRisk": "high",
+      "alertLevel": "high",
+      "lastUpdate": "2026-06-04T11:20:00Z"
+    }
+  ]
+}
