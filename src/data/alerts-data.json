@@ -16,7 +16,7 @@
       "severity": "critical",
       "status": "active",
       "timestamp": "2026-06-04T09:15:00Z",
-      "description": "Múltiplos focos de queimadas detectados por satélites. Condições críticas de seca."
+      "description": "Múltiplos focos de queimadas detecontactdos por satélites. Condições críticas de seca."
     },
     {
       "id": "alert-003",
@@ -43,7 +43,7 @@
       "severity": "medium",
       "status": "monitoring",
       "timestamp": "2026-06-04T06:30:00Z",
-      "description": "Focos de calor detectados. Equipes de monitoramento em alerta."
+      "description": "Focos de calor detecontactdos. Equipes de monitoramento em alerta."
     },
     {
       "id": "alert-006",
