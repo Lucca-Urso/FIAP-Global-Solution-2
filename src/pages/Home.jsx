@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import SectionTitle from '../components/SectionTitle';
 import Contact from '../components/Contact';
@@ -84,9 +85,9 @@ const Home = () => {
       />
 
       {summary && (
-        <section className="py-16 bg-bg-secondary">
+        <section className="py-20 bg-bg-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="card text-center">
                 <div className="text-4xl font-bold text-secondary-light mb-2">{summary.totalRegions}</div>
                 <div className="text-text-secondary text-sm">Regiões Monitoradas</div>
@@ -109,21 +110,21 @@ const Home = () => {
       )}
 
       {alerts.length > 0 && (
-        <section className="py-16">
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionTitle
               title="Alertas Ativos"
               subtitle="Acompanhe em tempo real os eventos climáticos que exigem atenção."
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {alerts.map((alert) => (
                 <AlertCard key={alert.id} alert={alert} />
               ))}
             </div>
             <div className="text-center mt-8">
-              <a href="/alertas" className="text-secondary-light hover:text-secondary transition-colors font-medium">
+              <Link to="/alertas" className="text-secondary-light hover:text-secondary transition-colors font-medium">
                 Ver todos os alertas →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -164,15 +165,15 @@ const Home = () => {
               title="Regiões Monitoradas"
               subtitle="Acompanhe as condições ambientais em diferentes biomas e regiões."
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {climateData.regions.slice(0, 4).map((region) => (
                 <ClimateCard key={region.id} region={region} />
               ))}
             </div>
             <div className="text-center mt-8">
-              <a href="/monitoramento" className="text-secondary-light hover:text-secondary transition-colors font-medium">
+              <Link to="/monitoramento" className="text-secondary-light hover:text-secondary transition-colors font-medium">
                 Ver todas as regiões →
-              </a>
+              </Link>
             </div>
           </div>
         </section>

@@ -4,7 +4,7 @@
 
 Uma plataforma inteligente de monitoramento climático inspirada em tecnologias orbitais de observação da Terra.
 
-## 🚀 Sobre o Projeto
+## Sobre o Projeto
 
 O Orbit Sentinel é uma plataforma de monitoramento ambiental que visa prevenir desastres naturais através do acompanhamento contínuo de condições climáticas. A solução utiliza conceitos de sensoriamento orbital para identificar riscos e emitir alertas preventivos.
 
@@ -18,21 +18,20 @@ O Orbit Sentinel é uma plataforma de monitoramento ambiental que visa prevenir 
 
 ### Eventos Monitorados
 
-- 🌊 Enchentes
-- 🔥 Queimadas
-- 🌡️ Ondas de calor
-- 💧 Baixa umidade
-- ⚠️ Riscos ambientais
+- Enchentes
+- Queimadas
+- Ondas de calor
+- Baixa umidade
+- Riscos ambientais
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-- **React 19+** - Biblioteca UI
 - **React Router DOM** - Navegação entre páginas
 - **Tailwind CSS** - Estilização utility-first
 - **Vite** - Build tool e dev server
 - **JavaScript (ES6+)** - Linguagem principal
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 src/
@@ -66,7 +65,7 @@ src/
 └── index.css            # Estilos globais + Tailwind
 ```
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Pré-requisitos
 
@@ -107,7 +106,7 @@ Os arquivos de produção serão gerados na pasta `dist/`.
 npm run preview
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Cores
 
@@ -132,14 +131,14 @@ npm run preview
 - Sombras suaves
 - Visual inspirado em observação orbital
 
-## 📱 Responsividade
+## Responsividade
 
 A aplicação é totalmente responsiva com breakpoints:
 - Mobile: < 640px
 - Tablet: 640px - 1024px
 - Desktop: > 1024px
 
-## 🔄 Fluxo de Dados
+## Fluxo de Dados
 
 Os dados são carregados via Promises que simulam chamadas de API:
 
@@ -148,11 +147,11 @@ Os dados são carregados via Promises que simulam chamadas de API:
 3. Dados são carregados do JSON local
 4. Estado é atualizado e componente renderiza
 
-## 📄 Licença
+## Licença
 
 Este projeto é parte de uma solução acadêmica FIAP.
 
-## 👥 Autores
+## Autores
 
 - Lucca Urso
 

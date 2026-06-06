@@ -68,10 +68,10 @@ const AlertCard = ({ alert }) => {
     <div className="card relative overflow-hidden">
       <div className={`absolute top-0 left-0 w-1 h-full ${status.color.split(' ')[0]}`}></div>
       
-      <div className="pl-4">
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center space-x-3">
-            <div className={`w-12 h-12 rounded-lg ${type.color} flex items-center justify-center text-white`}>
+      <div className="pl-5">
+        <div className="flex items-start justify-between mb-6 gap-4">
+          <div className="flex items-center space-x-4">
+            <div className={`w-14 h-14 rounded-xl ${type.color} flex items-center justify-center text-white flex-shrink-0`}>
               {type.icon}
             </div>
             <div>
@@ -89,13 +89,13 @@ const AlertCard = ({ alert }) => {
           </div>
         </div>
 
-        <p className="text-text-secondary text-sm mb-4 leading-relaxed">
+        <p className="text-text-secondary text-sm mb-6 leading-relaxed">
           {alert.description}
         </p>
 
-        <div className="flex items-center justify-between text-xs text-text-muted">
+        <div className="flex items-center justify-between text-xs text-text-muted pt-2">
           <div className="flex items-center space-x-2">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <span>{formatDate(alert.timestamp)}</span>

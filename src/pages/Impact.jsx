@@ -14,7 +14,7 @@ const Impact = () => {
       description: 'Proteção de vidas humanas através de alertas preventivos que permitem evacuações e preparativos antecipados.',
       stats: [
         { value: '500+', label: 'Comunidades Protegidas' },
-        { value: '1M+', label: 'Pessoas Impacontactdas' },
+        { value: '1M+', label: 'Pessoas Impactadas' },
       ],
     },
     {
@@ -26,7 +26,7 @@ const Impact = () => {
       title: 'Impacto Ambiental',
       description: 'Preservação de ecossistemas através do monitoramento de desmatamento, queimadas e mudanças climáticas.',
       stats: [
-        { value: '50M+', label: 'Hecontactres Monitorados' },
+        { value: '50M+', label: 'Hectares Monitorados' },
         { value: '85%', label: 'Redução de Danos' },
       ],
     },

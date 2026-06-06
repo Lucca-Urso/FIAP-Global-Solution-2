@@ -77,7 +77,7 @@ const Contributor = () => {
 
       <section className="py-24 bg-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contributionTypes.map((type, index) => (
               <div key={index} className="card text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-dark rounded-full flex items-center justify-center text-white mx-auto mb-4 shadow-lg">
@@ -155,7 +155,7 @@ const Contributor = () => {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="card border-2 border-secondary/30">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-2">
                     Nome Completo

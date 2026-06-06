@@ -13,8 +13,11 @@ function App() {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
+        <a href="#main-content" className="skip-to-content">
+          Pular para o conteúdo
+        </a>
         <Navbar />
-        <main className="flex-grow">
+        <main id="main-content" className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<About />} />

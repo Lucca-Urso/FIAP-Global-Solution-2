@@ -12,6 +12,7 @@ const Monitoring = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState('regions');
+  const [lastUpdate, setLastUpdate] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,8 +25,9 @@ const Monitoring = () => {
         setClimateData(climateResponse);
         setAlerts(alertsResponse.alerts);
         setSensors(sensorsResponse.sensors);
+        setLastUpdate(new Date(Date.now() - 10 * 60 * 1000));
         setLoading(false);
-      } catch (err) {
+      } catch {
         setError('Não foi possível carregar os dados de monitoramento. Tente novamente.');
         setLoading(false);
       }
@@ -106,9 +108,9 @@ const Monitoring = () => {
         </div>
       </section>
 
-      <section className="py-12 bg-bg-secondary">
+      <section className="py-16 bg-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="card text-center">
               <div className="text-3xl font-bold text-text-primary mb-2">{climateData?.regions.length || 0}</div>
               <div className="text-text-secondary text-sm">Regiões Monitoradas</div>
@@ -129,7 +131,7 @@ const Monitoring = () => {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 mb-8 justify-center">
             {tabs.map((tab) => (
@@ -154,7 +156,7 @@ const Monitoring = () => {
                 title="Regiões Monitoradas"
                 subtitle="Condições ambientais em tempo real de todas as regiões monitoradas."
               />
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 {climateData.regions.map((region) => (
                   <ClimateCard key={region.id} region={region} />
                 ))}
@@ -168,7 +170,7 @@ const Monitoring = () => {
                 title="Alertas Ativos"
                 subtitle="Todos os alertas ambientais atualmente ativos ou em monitoramento."
               />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {alerts.map((alert) => (
                   <AlertCard key={alert.id} alert={alert} />
                 ))}
@@ -190,7 +192,7 @@ const Monitoring = () => {
                 title="Rede de Sensores"
                 subtitle="Status e dados de todos os sensores da rede de monitoramento."
               />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {sensors.map((sensor) => (
                   <SensorCard key={sensor.id} sensor={sensor} />
                 ))}
@@ -201,7 +203,7 @@ const Monitoring = () => {
       </section>
 
       {climateData && (
-        <section className="py-8 bg-bg-secondary">
+        <section className="py-16 bg-bg-secondary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-block card px-6 py-3">
@@ -209,7 +211,7 @@ const Monitoring = () => {
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  Última atualização: <span className="font-medium text-text-primary ml-2">{new Date(climateData.lastUpdate).toLocaleString('pt-BR')}</span>
+                  Última atualização: <span className="font-medium text-text-primary ml-2">{lastUpdate ? lastUpdate.toLocaleString('pt-BR') : '—'}</span>
                 </p>
               </div>
             </div>

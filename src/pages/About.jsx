@@ -150,7 +150,7 @@ const About = () => {
             subtitle="Somos guiados por princípios que nos ajudam a cumprir nossa missão de proteção ambiental."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="card text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                 <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-dark rounded-full flex items-center justify-center text-white mx-auto mb-4 shadow-md">

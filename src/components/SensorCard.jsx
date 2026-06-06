@@ -58,30 +58,30 @@ const SensorCard = ({ sensor }) => {
 
   return (
     <div className="card">
-      <div className="flex items-start justify-between mb-6">
+      <div className="flex items-start justify-between mb-8 gap-4">
         <div className="flex items-center space-x-4">
-          <div className={`w-14 h-14 rounded-xl bg-bg-secondary flex items-center justify-center ${type.color}`}>
+          <div className={`w-14 h-14 rounded-xl bg-bg-secondary flex items-center justify-center flex-shrink-0 ${type.color}`}>
             {type.icon}
           </div>
           <div>
             <h3 className="font-semibold text-lg text-text-primary">{sensor.name}</h3>
-            <p className="text-sm text-text-secondary flex items-center">
-              <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <p className="text-sm text-text-secondary flex items-center mt-1">
+              <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               </svg>
               {sensor.location}
             </p>
           </div>
         </div>
-        <span className={`px-3 py-1 rounded-full text-xs font-medium ${status.bg} ${status.color}`}>
+        <span className={`px-3 py-1 rounded-full text-xs font-medium flex-shrink-0 ${status.bg} ${status.color}`}>
           {status.label}
         </span>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-4">
+      <div className="grid grid-cols-3 gap-4 mb-6">
         {sensor.metrics.map((metric, index) => (
-          <div key={index} className="bg-bg-secondary rounded-lg p-3 text-center">
-            <div className="text-xs text-text-muted mb-1">{metric.name}</div>
+          <div key={index} className="bg-bg-secondary rounded-lg p-4 text-center">
+            <div className="text-xs text-text-muted mb-1.5">{metric.name}</div>
             <div className="text-lg font-bold text-text-primary">
               {metric.value}
               {metric.unit && <span className="text-xs text-text-muted ml-1">{metric.unit}</span>}
@@ -90,9 +90,9 @@ const SensorCard = ({ sensor }) => {
         ))}
       </div>
 
-      <div className="flex items-center justify-between text-xs text-text-muted pt-4 border-t border-white/10">
+      <div className="flex items-center justify-between text-xs text-text-muted pt-5 border-t border-white/10">
         <div className="flex items-center space-x-2">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span>Atualizado: {formatDate(sensor.lastUpdate)}</span>

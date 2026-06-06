@@ -20,10 +20,10 @@ const Navbar = () => {
   return (
     <nav className="glass sticky top-0 z-50 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           <Link to="/" className="flex items-center space-x-4 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-secondary/50 transition-shadow duration-300">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-11 h-11 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-secondary/50 transition-shadow duration-300">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </div>
@@ -61,8 +61,8 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="md:hidden glass border-t border-white/10 pb-4">
-            <div className="px-4 pt-4 space-y-2">
+          <div className="md:hidden glass border-t border-white/10 pb-6">
+            <div className="px-4 pt-6 space-y-3">
               {navItems.map((item) => (
                 <Link
                   key={item.path}

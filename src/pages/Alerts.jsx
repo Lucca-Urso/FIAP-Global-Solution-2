@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import SectionTitle from '../components/SectionTitle';
 import AlertCard from '../components/AlertCard';
 import { api } from '../services/api';
 
 const Alerts = () => {
   const [alerts, setAlerts] = useState([]);
-  const [filteredAlerts, setFilteredAlerts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [filterType, setFilterType] = useState('all');
@@ -16,9 +15,8 @@ const Alerts = () => {
       try {
         const data = await api.getAlerts();
         setAlerts(data.alerts);
-        setFilteredAlerts(data.alerts);
         setLoading(false);
-      } catch (err) {
+      } catch {
         setError('Não foi possível carregar os alertas. Tente novamente.');
         setLoading(false);
       }
@@ -27,18 +25,12 @@ const Alerts = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    let filtered = [...alerts];
-    
-    if (filterType !== 'all') {
-      filtered = filtered.filter(alert => alert.type === filterType);
-    }
-    
-    if (filterSeverity !== 'all') {
-      filtered = filtered.filter(alert => alert.severity === filterSeverity);
-    }
-    
-    setFilteredAlerts(filtered);
+  const filteredAlerts = useMemo(() => {
+    return alerts.filter((alert) => {
+      const matchesType = filterType === 'all' || alert.type === filterType;
+      const matchesSeverity = filterSeverity === 'all' || alert.severity === filterSeverity;
+      return matchesType && matchesSeverity;
+    });
   }, [alerts, filterType, filterSeverity]);
 
   const getStats = () => {
@@ -113,9 +105,9 @@ const Alerts = () => {
         </div>
       </section>
 
-      <section className="py-12 bg-bg-secondary">
+      <section className="py-16 bg-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             <div className="card text-center">
               <div className="text-3xl font-bold text-text-primary mb-2">{stats.total}</div>
               <div className="text-text-secondary text-sm">Total de Alertas</div>
@@ -144,10 +136,10 @@ const Alerts = () => {
         </div>
       </section>
 
-      <section className="py-8">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="card">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <label className="block text-sm font-medium text-text-secondary mb-2">
                   Tipo de Evento
@@ -185,7 +177,7 @@ const Alerts = () => {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Lista de Alertas"
@@ -193,7 +185,7 @@ const Alerts = () => {
           />
 
           {filteredAlerts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {filteredAlerts.map((alert) => (
                 <AlertCard key={alert.id} alert={alert} />
               ))}
@@ -209,11 +201,11 @@ const Alerts = () => {
         </div>
       </section>
 
-      <section className="py-12 bg-bg-secondary">
+      <section className="py-16 bg-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="card">
             <h3 className="text-lg font-semibold text-text-primary mb-4">Legenda de Severidade</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="flex items-center space-x-3">
                 <div className="w-4 h-4 rounded-full bg-green-500"></div>
                 <span className="text-text-secondary text-sm">Baixo - Condições normais</span>
