@@ -153,7 +153,10 @@ Este projeto é parte de uma solução acadêmica FIAP.
 
 ## Autores
 
-- Lucca Urso
+- Lucca Ghiraldi Urso - RM566739
+- Gustavo Moretim Canzi - RM567683
+- Gustavo Castilho Gonçalves - RM566970
+- Eduarda da Silva Brito - RM567347
 
 ---
 
