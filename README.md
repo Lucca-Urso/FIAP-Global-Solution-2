@@ -4,6 +4,12 @@
 
 Uma plataforma inteligente de monitoramento climático inspirada em tecnologias orbitais de observação da Terra.
 
+## Link do Deploy
+
+``` 
+https://global-solution-2-lac.vercel.app/
+```
+
 ## Sobre o Projeto
 
 O Orbit Sentinel é uma plataforma de monitoramento ambiental que visa prevenir desastres naturais através do acompanhamento contínuo de condições climáticas. A solução utiliza conceitos de sensoriamento orbital para identificar riscos e emitir alertas preventivos.
@@ -144,7 +150,3 @@ Os dados são carregados via Promises que simulam chamadas de API:
 - Gustavo Moretim Canzi - RM567683
 - Gustavo Castilho Gonçalves - RM566970
 - Eduarda da Silva Brito - RM567347
-
----
-
-**Orbit Sentinel** - Observando hoje para proteger o amanhã
