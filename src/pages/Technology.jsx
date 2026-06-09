@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import SectionTitle from '../components/SectionTitle';
 import Contact from '../components/Contact';
+import satelite_1  from "../assets/images/satelite_1.svg"
 
 const Technology = () => {
   const technologies = [
@@ -175,21 +176,7 @@ const Technology = () => {
                 </li>
               </ul>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary-dark flex items-center justify-center">
-                <div className="text-center">
-                  <div className="relative">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary to-secondary-dark flex items-center justify-center animate-pulse">
-                      <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <div className="absolute inset-0 rounded-full border-2 border-secondary/30 animate-ping"></div>
-                  </div>
-                  <p className="text-text-primary text-lg font-medium">Satélite em Órbita</p>
-                </div>
-              </div>
-            </div>
+              <img src={satelite_1} className="border-10 text-indigo-950 rounded-lg" alt="Satélite artificial em órbita ao redor da Terra, representando monitoramento espacial, comunicação global e transmissão de dados via tecnologia orbital." aria-hidden="true"/>
           </div>
         </div>
       </section>

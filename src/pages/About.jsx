@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import SectionTitle from '../components/SectionTitle';
 import Contact from '../components/Contact';
+import satelite_2  from "../assets/images/satelite_2.svg"
 
 const About = () => {
   const mission = {
@@ -153,9 +154,6 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="card text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-dark rounded-full flex items-center justify-center text-white mx-auto mb-4 shadow-md">
-                  {value.icon}
-                </div>
                 <h3 className="font-semibold text-text-primary mb-2">{value.title}</h3>
                 <p className="text-sm text-text-secondary">{value.description}</p>
               </div>
@@ -203,16 +201,7 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-primary-dark flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-32 h-32 text-secondary-light mx-auto mb-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  <p className="text-text-primary text-lg font-medium">Satélite em Órbita</p>
-                </div>
-              </div>
-            </div>
+             <img src={satelite_2} className="border-10 text-indigo-950 rounded-lg" alt="Satélite artificial orbitando a Terra, responsável por comunicação, internet, navegação por GPS e monitoramento do planeta." aria-hidden="true"/>
           </div>
         </div>
       </section>

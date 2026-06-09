@@ -122,15 +122,6 @@ npm run preview
 - **Fonte Principal**: Inter (Google Fonts)
 - **Hierarquia**: H1 (48px), H2 (36px), H3 (24px), Corpo (16px)
 
-### Características Visuais
-
-- Fundo predominantemente escuro
-- Gradientes suaves
-- Efeito glassmorphism leve
-- Bordas discretas
-- Sombras suaves
-- Visual inspirado em observação orbital
-
 ## Responsividade
 
 A aplicação é totalmente responsiva com breakpoints:
@@ -146,10 +137,6 @@ Os dados são carregados via Promises que simulam chamadas de API:
 2. Promise com delay simula latência de rede
 3. Dados são carregados do JSON local
 4. Estado é atualizado e componente renderiza
-
-## Licença
-
-Este projeto é parte de uma solução acadêmica FIAP.
 
 ## Autores
 

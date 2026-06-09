@@ -1,38 +1,18 @@
 const AlertCard = ({ alert }) => {
   const typeMapping = {
     flood: {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
       label: 'Enchente',
       color: 'bg-blue-500'
     },
     fire: {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-        </svg>
-      ),
       label: 'Queimada',
       color: 'bg-orange-500'
     },
     heat: {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707" />
-        </svg>
-      ),
       label: 'Calor Extremo',
       color: 'bg-red-500'
     },
     drought: {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
-        </svg>
-      ),
       label: 'Baixa Umidade',
       color: 'bg-yellow-500'
     }
@@ -71,9 +51,6 @@ const AlertCard = ({ alert }) => {
       <div className="pl-5">
         <div className="flex items-start justify-between mb-6 gap-4">
           <div className="flex items-center space-x-4">
-            <div className={`w-14 h-14 rounded-xl ${type.color} flex items-center justify-center text-white flex-shrink-0`}>
-              {type.icon}
-            </div>
             <div>
               <h3 className="font-semibold text-lg text-text-primary">{type.label}</h3>
               <p className="text-sm text-text-secondary">{alert.region}</p>

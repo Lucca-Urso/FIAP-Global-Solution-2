@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import icon from '../assets/images/orbit_sentinel_icon.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,9 +24,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-24">
           <Link to="/" className="flex items-center space-x-4 group">
             <div className="w-11 h-11 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-secondary/50 transition-shadow duration-300">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+            <img src={icon} alt="orbit sentinel icon" className="w-15 h-15 rounded-full" aria-hidden="true"/>
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-xl tracking-tight text-text-primary">Orbit Sentinel</span>
